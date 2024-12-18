@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+    /* Границы внутрь, а не наружу */
+    scroll-behavior: smooth;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+body {
+    background: rgb(61, 61, 110);
+    position: relative;
+}
+.container {
+    
+    justify-self: center;
+}
+.display {
+    display: flex;
+    height: 520px;
+    width: 900px;
+    background: url(./win.jpeg) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    border: solid 10px gray;
+    overflow: hidden;
+    clip-path: inset(10px 10px 10px 10px);
+}
+.winfigure {
+    position: absolute;
+    display: flex;
+    width: 340px;
+    height: 300px;
+    background: url(./window.png) no-repeat center center;
+    background-size: contain;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: move;
+}
+.figure {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background: rgb(178, 194, 238);
+    transform: translate(90px, 12px);
+    align-items: center;
+    justify-content: center;
+}
+.close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 42px;
+    right: 22px;
+    cursor: pointer;
+}
+.button-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 80px;
+    height: 70px;
+    border-radius: 10%;
+    font-size: 15px;
+}
+.text-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.text-input>button {
+    width: 100%;
+    height: 100%;
+}
+#text {
+    grid-column: span 2;
+}
+.hiden {
+    display: none;
+}
