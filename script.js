@@ -32,25 +32,33 @@ function square (event) {
     figure.classList.remove("hiden");
     figure.style.borderRadius = "0";
 }   
+function changeColor(color) {
+  if ((Array.from(figure.classList)).length === 2) {
+    console.log((Array.from(figure.classList)).length);
+    alert("Сначала выберите фигуру!")
+  } else {
+    figure.style.backgroundColor = `${colors[color].hex}`;
+  }
+}
 buttons[1].addEventListener("click", square);
 function red (event) {
     event.preventDefault();
-    figure.style.backgroundColor = `${colors[0].hex}`;
+    changeColor(0)
 }   
 buttons[2].addEventListener("click", red);
 function yellow (event) {
     event.preventDefault();
-    figure.style.backgroundColor = `${colors[1].hex}`;
+    changeColor(1)
 }   
 buttons[3].addEventListener("click", yellow);
 function green (event) {
     event.preventDefault();
-    figure.style.backgroundColor = `${colors[2].hex}`;
+    changeColor(2)
 }   
 buttons[4].addEventListener("click", green);
 function blue (event) {
     event.preventDefault();
-    figure.style.backgroundColor = `${colors[3].hex}`;
+    changeColor(3)
 }   
 buttons[5].addEventListener("click", blue);
 
